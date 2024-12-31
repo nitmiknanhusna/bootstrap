@@ -1,0 +1,54 @@
+.title {
+    font-family: "Monomaniac One", sans-serif;
+    font-weight: 700;
+    font-size: 35px; 
+    text-transform: uppercase;
+    color:transparent;
+    background: linear-gradient(
+      135deg, #800080, #fb9ebb, #800080
+    );
+    background-size: 500px 100%;
+    background-clip: text;
+  }
+
+  .title_footer {
+    font-family: "Monomaniac One", sans-serif;
+    font-weight: 700;
+    font-size: 25px; 
+    text-transform: uppercase;
+    color:transparent;
+    background: linear-gradient(
+      135deg, #800080, #fb9ebb, #800080
+    );
+    background-size: 500px 100%;
+    background-clip: text;
+  }
+
+
+  .card_transparent {
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+.justify{
+  text-align: justify;
+}
+
+.card-body {
+  min-height: 150px; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box_small{
+  width: 55px;
+  height: 55px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+
+

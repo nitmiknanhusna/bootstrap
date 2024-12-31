@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>USEP:UiTM Student E-Profile</title>
+
+    <!--bootstrap CSS CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--chartjs-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!--style.css-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <!--header-->
+    <div class="container my-4">
+    <div class="title">UiTM Student E-Profile</div>
+</div>
+
+    <!--navigation-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+         <img src="img/UITM-removebg-preview.png" alt="UITM LOGO" width="40px">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="profiles.html">Profiles</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Profile Details</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="darkModeToggle" />
+                <label class="form-check-label" for="darkModeToggle" id="themeLabel">Dark Mode</label>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <!--content-->
+    <div class="container">
+      <div class="row my-4">
+  
+          <div class="col-md-3">
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control bg-body-tertiary"
+                      id="floatingDepartment" placeholder="Program">
+                  <label for="floatingDepartment">Program</label>
+              </div>
+          </div>
+  
+          <div class="col-md-3">
+              <div class="form-floating">
+                  <select class="form-select bg-body-tertiary" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Select Faculty</option>
+                      <option value="1">Faculty of Computer and Mathematical Sciences</option>
+                      <option value="2">Faculty of Business and Management</option>
+                      <option value="3">Faculty of Civil Engineering</option>
+                      <option value="4">Faculty of Education</option>
+                      <option value="5">Faculty of Art and Design</option>
+                  </select>
+                  <label for="floatingSelect">Faculty</label>
+              </div>
+          </div>
+  
+          <div class="col-md-3">
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control bg-body-tertiary"
+                      id="floatingProject" placeholder="Student Name">
+                  <label for="floatingProject">Student Name</label>
+              </div>
+          </div>
+  
+          <div class="col-md-3">
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control bg-body-tertiary"
+                      id="floatingSearch" placeholder="Search by ID">
+                  <label for="floatingSearch">Search</label>
+              </div>
+          </div>
+  
+      </div>
+  </div>
+  
+    <div class="container-fluid bg-body-tertiary">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-md-2 text-center">
+                    <img src="img/UITM-LOGO-01-removebg-preview.png" alt= "UiTM" width="200px" />
+                </div>
+
+                <div class="col-md-10">
+                    <h3> Universiti Teknologi Mara</h3>
+                    <p>Universiti Teknologi MARA (UiTM) is Malaysia's premier institution of higher learning, offering a wide range of programs designed to produce skilled, knowledgeable, and competent graduates. UiTM is dedicated to excellence in education and fostering innovation, creativity, and entrepreneurship among its students.</p>
+
+                    <span class="badge text-bg-warning py-2 px-2"><i class="fa-solid fa-check"></i>11, 650 Research</span>
+                    <span class="badge text-bg-success py-2 px-2"><i class="fa-solid fa-star"></i> 10, 111 Completed</span>
+                    <span class="badge text-bg-danger py-2 px-2"><i class="fa-solid fa-triangle-exclamation"></i>50  Not Completed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="card shadow bg-body-tertiary border-0">
+                  <div class="card-body">
+                      <div>
+                          <canvas id="Chart1"></canvas>
+                          <script>
+                              const Chart1 = document.getElementById('Chart1');
+                            
+                              new Chart(Chart1, {
+                                type: 'bar',
+                                data: {
+                                  labels: ['Ahmad', 'Nurul', 'Danish', 'Siti', 'Arif'],
+                                  datasets: [{
+                                    label: 'Project Completion (%)',
+                                    data: [85, 92, 78, 88, 94],
+                                    backgroundColor: [
+                                      'rgba(255, 99, 132, 0.6)',
+                                      'rgba(54, 162, 235, 0.6)',
+                                      'rgba(255, 206, 86, 0.6)',
+                                      'rgba(75, 192, 192, 0.6)',
+                                      'rgba(153, 102, 255, 0.6)'
+                                    ],
+                                    borderColor: [
+                                      'rgba(255, 99, 132, 1)',
+                                      'rgba(54, 162, 235, 1)',
+                                      'rgba(255, 206, 86, 1)',
+                                      'rgba(75, 192, 192, 1)',
+                                      'rgba(153, 102, 255, 1)'
+                                    ],
+                                    borderWidth: 1
+                                  }]
+                                },
+                                options: {
+                                  scales: {
+                                    y: {
+                                      beginAtZero: true
+                                    }
+                                  }
+                                }
+                              });
+                            </script>
+                        </div>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col-md-4">
+              <div class="card shadow bg-body-tertiary border-0">
+                  <div class="card-body">
+                      <canvas id="Chart2"></canvas>
+                      <script>
+                          const Chart2 = document.getElementById('Chart2');
+                        
+                          new Chart(Chart2, {
+                            type: 'line',
+                            data: {
+                              labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+                              datasets: [{
+                                label: 'Assignment Progress (%)',
+                                data: [20, 40, 60, 80, 100],
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                borderColor: 'rgba(75, 192, 192, 1)',
+                                borderWidth: 2
+                              }]
+                            },
+                            options: {
+                              scales: {
+                                y: {
+                                  beginAtZero: true
+                                }
+                              }
+                            }
+                          });
+                        </script>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col-md-4">
+              <div class="card shadow bg-body-tertiary border-0">
+                  <div class="card-body">
+                      <canvas id="Chart3"></canvas>
+                      <script>
+                          const Chart3 = document.getElementById('Chart3');
+                        
+                          new Chart(Chart3, {
+                            type: 'line',
+                            data: {
+                              labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+                              datasets: [{
+                                label: 'Attendance Rate (%)',
+                                data: [100, 95, 90, 85, 100],
+                                backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                                borderColor: 'rgba(255, 159, 64, 1)',
+                                borderWidth: 2,
+                                stepped: true,
+                              }]
+                            },
+                            options: {
+                              scales: {
+                                y: {
+                                  beginAtZero: true
+                                }
+                              }
+                            }
+                          });
+                        </script>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div class="container-fluid pastel my-4">
+    <div class="container">
+        <div class="row">
+            <!-- Leadership -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-crown"></i> Leadership</h5>
+                        <p class="card-text">UiTM students are trained to be leaders, equipped with skills to lead in diverse fields.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Excellence -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-graduation-cap"></i> Academic Excellence</h5>
+                        <p class="card-text">UiTM students strive for academic success, excelling in various disciplines and research.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diversity -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-users"></i> Diversity</h5>
+                        <p class="card-text">UiTM students come from diverse backgrounds, fostering an environment of inclusion and mutual respect.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Service -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-handshake-angle"></i> Community Service</h5>
+                        <p class="card-text">UiTM students actively participate in community service, contributing positively to society.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-trophy"></i> Achievements</h5>
+                        <p class="card-text">UiTM students have won national-level debate competitions and international hackathons.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Career Opportunities -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-briefcase"></i> Career Opportunities</h5>
+                        <p class="card-text">UiTM collaborates with leading industries to provide students with internships and job placements.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clubs and Societies -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-users-line"></i> Clubs & Societies</h5>
+                        <p class="card-text">Join over 50 student organizations, ranging from arts to technology-focused clubs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-calendar"></i> Upcoming Events</h5>
+                        <p class="card-text">Don't miss the UiTM Annual Career Fair and Innovation Day on January 15th.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-comments"></i> Testimonials</h5>
+                        <p class="card-text">"UiTM gave me the confidence to excel in my field. The support from faculty and peers was exceptional!" - Alumni</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campus Facilities -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-building"></i> Campus Facilities</h5>
+                        <p class="card-text">State-of-the-art libraries, innovation labs, and sports facilities are available for all students.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scholarships -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-hand-holding-dollar"></i> Scholarships</h5>
+                        <p class="card-text">UiTM offers merit-based scholarships and financial aid to deserving students.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Stories -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-star"></i> Alumni Stories</h5>
+                        <p class="card-text">UiTM graduates are thriving globally as CEOs, engineers, and researchers in top companies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exchange Programs -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-globe"></i> Exchange Programs</h5>
+                        <p class="card-text">UiTM offers exchange programs in collaboration with universities across Asia and Europe.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entrepreneurship -->
+            <div class="col-md-3">
+                <div class="card my-2 border-0 card_transparent">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-lightbulb"></i> Entrepreneurship</h5>
+                        <p class="card-text">UiTM encourages students to innovate and provides support through incubation programs.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+  <div class="container">
+    <h3><i class="fa-regular fa-folder"></i> UiTM Student Records </h3>
+
+
+    <div class="row my-3">
+      <!-- Profile 1 -->
+      <div class="col-md-4 mb-4">
+          <div class="card bg-body-tertiary border-0 shadow">
+              <div class="card-body">
+                  <h6 class="my-3"><i class="fa-regular fa-user"></i> Ahmad Hafiz</h6>
+                  <p><strong>Course:</strong> Bachelor of Computer Science (Hons.)</p>
+                  <p><strong>Status:</strong> Active</p>
+                  <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar bg-success" style="width: 85%">85%</div>
+                  </div>
+                  <div class="text-end mt-3">
+                      <button type="button" class="btn btn-primary btn-sm"><i class="fa-regular fa-eye"></i> View</button>
+                      <button type="button" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i> Remove</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Profile 2 -->
+      <div class="col-md-4 mb-4">
+          <div class="card bg-body-tertiary border-0 shadow">
+              <div class="card-body">
+                  <h6 class="my-3"><i class="fa-regular fa-user"></i> Nurul Aisyah</h6>
+                  <p><strong>Course:</strong> Diploma in Business Studies</p>
+                  <p><strong>Status:</strong> Active</p>
+                  <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar bg-success" style="width: 92%">92%</div>
+                  </div>
+                  <div class="text-end mt-3">
+                      <button type="button" class="btn btn-primary btn-sm"><i class="fa-regular fa-eye"></i> View</button>
+                      <button type="button" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i> Remove</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Profile 3 -->
+      <div class="col-md-4 mb-4">
+          <div class="card bg-body-tertiary border-0 shadow">
+              <div class="card-body">
+                  <h6 class="my-3"><i class="fa-regular fa-user"></i> Muhammad Danish</h6>
+                  <p><strong>Course:</strong> Bachelor of Civil Engineering (Hons.)</p>
+                  <p><strong>Status:</strong> Pending</p>
+                  <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar bg-warning" style="width: 30%">30%</div>
+                  </div>
+                  <div class="text-end mt-3">
+                      <button type="button" class="btn btn-primary btn-sm"><i class="fa-regular fa-eye"></i> View</button>
+                      <button type="button" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i> Remove</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Profile 4 -->
+      <div class="col-md-4 mb-4">
+          <div class="card bg-body-tertiary border-0 shadow">
+              <div class="card-body">
+                  <h6 class="my-3"><i class="fa-regular fa-user"></i> Siti Khadijah</h6>
+                  <p><strong>Course:</strong> Bachelor of Education (Hons.) in TESL</p>
+                  <p><strong>Status:</strong> Completed</p>
+                  <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar bg-success" style="width: 100%">100%</div>
+                  </div>
+                  <div class="text-end mt-3">
+                      <button type="button" class="btn btn-primary btn-sm"><i class="fa-regular fa-eye"></i> View</button>
+                      <button type="button" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i> Remove</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Profile 5 -->
+      <div class="col-md-4 mb-4">
+          <div class="card bg-body-tertiary border-0 shadow">
+              <div class="card-body">
+                  <h6 class="my-3"><i class="fa-regular fa-user"></i> Arif Shahir</h6>
+                  <p><strong>Course:</strong> Bachelor of Multimedia (Hons.)</p>
+                  <p><strong>Status:</strong> Active</p>
+                  <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar bg-success" style="width: 50%">50%</div>
+                  </div>
+                  <div class="text-end mt-3">
+                      <button type="button" class="btn btn-primary btn-sm"><i class="fa-regular fa-eye"></i> View</button>
+                      <button type="button" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i> Remove</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div class="container">
+    <div class="row my-4">
+        <!-- Student Profile Content Section -->
+        <div class="col-md-12">
+            <h3><i class="fas fa-users"></i> UiTM Student Profiles</h3>
+            
+            <!-- Ahmad Hafiz Bin Ramli -->
+            <div class="card mb-3 bg-body-tertiary">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-user"></i> Ahmad Hafiz Bin Ramli</h5>
+                    <p class="card-text"><strong><i class="fas fa-id-card"></i> Student ID:</strong> 2023456789</p>
+                    <p class="card-text"><strong><i class="fas fa-book"></i> Program:</strong> Bachelor of Computer Science (Hons.)</p>
+                    <p class="card-text"><strong><i class="fas fa-school"></i> Faculty:</strong> Faculty of Computer and Mathematical Sciences</p>
+                    <p class="card-text"><strong><i class="fas fa-envelope"></i> Email:</strong> ahmad.hafiz@student.uitm.edu.my</p>
+                    <p class="card-text"><strong><i class="fas fa-phone"></i> Contact:</strong> +6012-3456789</p>
+                    <p class="card-text"><strong><i class="fas fa-cogs"></i> Skills:</strong> Web Development, Python Programming, Data Analysis</p>
+                    <p class="card-text"><strong><i class="fas fa-info-circle"></i> About:</strong> Ahmad is passionate about building innovative software solutions and enjoys participating in hackathons.</p>
+                </div>
+            </div>
+
+            <!-- Nurul Aisyah Binti Zulkifli -->
+            <div class="card mb-3 bg-body-tertiary">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-user"></i> Nurul Aisyah Binti Zulkifli</h5>
+                    <p class="card-text"><strong><i class="fas fa-id-card"></i> Student ID:</strong> 2023123456</p>
+                    <p class="card-text"><strong><i class="fas fa-book"></i> Program:</strong> Diploma in Business Studies</p>
+                    <p class="card-text"><strong><i class="fas fa-school"></i> Faculty:</strong> Faculty of Business and Management</p>
+                    <p class="card-text"><strong><i class="fas fa-envelope"></i> Email:</strong> nurul.aisyah@student.uitm.edu.my</p>
+                    <p class="card-text"><strong><i class="fas fa-phone"></i> Contact:</strong> +6011-22334455</p>
+                    <p class="card-text"><strong><i class="fas fa-cogs"></i> Skills:</strong> Marketing, Financial Planning, Communication</p>
+                    <p class="card-text"><strong><i class="fas fa-info-circle"></i> About:</strong> Nurul is an aspiring entrepreneur with a keen interest in digital marketing strategies.</p>
+                </div>
+            </div>
+
+            <!-- Muhammad Danish Bin Amirul -->
+            <div class="card mb-3 bg-body-tertiary">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-user"></i> Muhammad Danish Bin Amirul</h5>
+                    <p class="card-text"><strong><i class="fas fa-id-card"></i> Student ID:</strong> 2023567890</p>
+                    <p class="card-text"><strong><i class="fas fa-book"></i> Program:</strong> Bachelor of Civil Engineering (Hons.)</p>
+                    <p class="card-text"><strong><i class="fas fa-school"></i> Faculty:</strong> Faculty of Civil Engineering</p>
+                    <p class="card-text"><strong><i class="fas fa-envelope"></i> Email:</strong> danish.amirul@student.uitm.edu.my</p>
+                    <p class="card-text"><strong><i class="fas fa-phone"></i> Contact:</strong> +6013-4567890</p>
+                    <p class="card-text"><strong><i class="fas fa-cogs"></i> Skills:</strong> Structural Analysis, AutoCAD, Project Management</p>
+                    <p class="card-text"><strong><i class="fas fa-info-circle"></i> About:</strong> Danish is a dedicated civil engineering student focusing on sustainable building designs.</p>
+                </div>
+            </div>
+
+            <!-- Siti Khadijah Binti Rahman -->
+            <div class="card mb-3 bg-body-tertiary">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-user"></i> Siti Khadijah Binti Rahman</h5>
+                    <p class="card-text"><strong><i class="fas fa-id-card"></i> Student ID:</strong> 2023345678</p>
+                    <p class="card-text"><strong><i class="fas fa-book"></i> Program:</strong> Bachelor of Education (Hons.) in TESL</p>
+                    <p class="card-text"><strong><i class="fas fa-school"></i> Faculty:</strong> Faculty of Education</p>
+                    <p class="card-text"><strong><i class="fas fa-envelope"></i> Email:</strong> siti.khadijah@student.uitm.edu.my</p>
+                    <p class="card-text"><strong><i class="fas fa-phone"></i> Contact:</strong> +6012-9876543</p>
+                    <p class="card-text"><strong><i class="fas fa-cogs"></i> Skills:</strong> Lesson Planning, Public Speaking, Creative Writing</p>
+                    <p class="card-text"><strong><i class="fas fa-info-circle"></i> About:</strong> Siti is an aspiring educator who believes in fostering creativity and critical thinking in students.</p>
+                </div>
+            </div>
+
+            <!-- Arif Shahir Bin Kamal -->
+            <div class="card mb-3 bg-body-tertiary">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-user"></i> Arif Shahir Bin Kamal</h5>
+                    <p class="card-text"><strong><i class="fas fa-id-card"></i> Student ID:</strong> 2023789012</p>
+                    <p class="card-text"><strong><i class="fas fa-book"></i> Program:</strong> Bachelor of Multimedia (Hons.)</p>
+                    <p class="card-text"><strong><i class="fas fa-school"></i> Faculty:</strong> Faculty of Art and Design</p>
+                    <p class="card-text"><strong><i class="fas fa-envelope"></i> Email:</strong> arif.shahir@student.uitm.edu.my</p>
+                    <p class="card-text"><strong><i class="fas fa-phone"></i> Contact:</strong> +6017-6543210</p>
+                    <p class="card-text"><strong><i class="fas fa-cogs"></i> Skills:</strong> Graphic Design, Video Editing, UI/UX Design</p>
+                    <p class="card-text"><strong><i class="fas fa-info-circle"></i> About:</strong> Arif specializes in creating visually stunning and user-friendly designs, with a portfolio of multimedia projects.</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- End of Student Profile Content Section -->
+    </div>
+</div>
+
+    <!--footer-->
+      <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-4">
+                    <h5><i class="fas fa-envelope"></i> Contact Us</h5>
+                    <p>UiTM, 40450 Shah Alam, Selangor, Malaysia</p>
+                    <p>Phone: +603-5544 2000</p>
+                    <p>Email: info@uitm.edu.my</p>
+                </div>
+    
+                <!-- Quick Links -->
+                <div class="col-md-4">
+                    <h5><i class="fas fa-link"></i> Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">About Us</a></li>
+                        <li><a href="#" class="text-light">FAQ</a></li>
+                        <li><a href="#" class="text-light">Privacy Policy</a></li>
+                        <li><a href="#" class="text-light">Terms of Service</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Social Media -->
+                <div class="col-md-4">
+                    <h5><i class="fas fa-share-alt"></i> Follow Us</h5>
+                    <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+    
+            <hr class="bg-light">
+    
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 UiTM. All rights reserved.</p>
+            </div>
+        </div>
+
+        <footer class="footer mt-auto py-3 ">
+          <div class="container text-center">
+            <p> Nur Itmiknan Husna Binti Jefri. 2024977541</p>
+          </div>
+
+    </footer>
+  
+    <!--bootstrap js CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!--darkmode script-->
+    <script>
+        function setTheme(theme){
+            document.documentElement.setAttribute("data-bs-theme",theme);
+            localStorage.setItem("theme",theme);
+            document.getElementById("themeLabel").innerText =
+            theme ==="dark" ? "Dark Mode On" :"Dark Mode Off";
+        }
+
+        document
+        .getElementById("darkModeToggle")
+        .addEventListener("change", function (event){
+            if (event.target.checked) {
+                setTheme("dark");
+            } else{
+                setTheme("");
+        }
+    });
+
+    window.onload = function () {
+        let savedTheme =localStorage.getItem("theme");
+        if(savedTheme){
+            setTheme(savedTheme);
+            if (savedTheme ==="dark") {
+                document.getElementById("darkModeToggle").checked = true;
+            }
+
+        }
+    };
+    </script>
+  </body>
+</html>
